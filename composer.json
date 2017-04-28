@@ -1,0 +1,13 @@
+{
+    "name": "wp-id/wpidthemes",
+    "type": "wordpress-theme",
+    "description": "wpidthemes is a WordPress theme and an isomorphic React.js application using NodeifyWP.",
+    "license": "GPLv2",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Ivan Kristianto, 10up",
+            "email": "ivan.kristianto@10up.com"
+        }
+    ]
+}
