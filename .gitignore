@@ -6,3 +6,5 @@ assets/js/server.js
 assets/js/includes.js
 assets/css/wpid.css
 npm-debug.log
+assets/css/wpid.css.map
+assets/css/wpid.min.css
