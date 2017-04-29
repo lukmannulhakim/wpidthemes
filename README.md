@@ -11,13 +11,13 @@ WordPress Indonesia Themes is a __true isomorphic application__ within PHP. It p
 
 ## Requirements
 
-* [NodeifyWP Environment](https://github.com/10up/nodeifywp-environment)
+* [NodeifyWP Environment](https://github.com/wp-id/sitedocker)
 * [NodeifyWP](https://github.com/10up/nodeifywp)
 * [npm](https://www.npmjs.com/)
 
 ## Setup
 
-After properly setting up the [NodeifyWP environment](https://github.com/10up/nodeifywp-environment):
+After properly setting up the [NodeifyWP environment](https://github.com/wp-id/sitedocker):
 
 1. Activate the theme in WordPress
 2. Within the theme directory, run the following in the command line:
