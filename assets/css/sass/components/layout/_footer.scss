@@ -1,0 +1,22 @@
+.footer {
+	margin: 60px auto 0;
+	max-width: 1000px;
+	width: 100%;
+
+	@include mq(medium) {
+		width: calc(100% - 50px);
+	}
+
+	.colophon {
+		color: $color-fuscous-grey;
+		font-size: 11px;
+		line-height: 1.5;
+		padding: 0 20px;
+
+		@include mq(medium) {
+			margin: 0 auto;
+			max-width: 65em;
+			padding: 0;
+		}
+	}
+}

@@ -1,0 +1,157 @@
+.entry-content {
+	font-size: $font-18;
+	line-height: 1.6;
+	position: relative;
+	@import 'tables';
+
+	@include mq(medium) {
+		line-height: 1.8;
+		margin: 0 $pad-medium;
+	}
+
+	@include all-the-headers() {
+		line-height: 1.5;
+	}
+
+	h2 {
+		font-weight: $font-light;
+	}
+
+	> *:not(img):not(.wp-caption):not(.callout):not(.lede):not(hr):not(table) {
+		padding: 0 $pad-small;
+
+		@include mq(medium) {
+			padding: 0 $pad-medium;
+		}
+	}
+
+	ul,
+	ol {
+		margin-left: $pad-small;
+		padding-left: initial;
+
+		@include mq(medium) {
+			margin-left: $pad-small;
+		}
+
+		ul,
+		ol {
+			margin-left: $pad-small;
+
+			@include mq(medium) {
+				margin-left: $pad-small;
+			}
+		}
+	}
+
+	a {
+		color: $color-blue-medium;
+
+		@include visual-focus() {
+			color: $color-blue-dark;
+		}
+	}
+
+	p > img.size-large,
+	p > img.size-full {
+		margin-left: -$pad-small;
+		margin-right: -$pad-small;
+		max-width: none;
+		width: calc(100% + 40px);
+
+		@include mq(medium) {
+			margin-left: -$pad-medium;
+			margin-right: -$pad-medium;
+			max-width: calc(100% + (2 * #{$pad-medium}));
+			width: calc(100% + (2 * #{$pad-medium}));
+		}
+	}
+
+	img,
+	.wp-caption {
+		margin-bottom: 1em;
+		margin-top: 1em;
+		width: 100%;
+
+		@include mq(medium) {
+			width: auto;
+
+			&.alignright {
+				float: right;
+				margin-left: 1em;
+			}
+
+			&.alignleft {
+				float: left;
+				margin-right: 1em;
+			}
+
+			&.aligncenter {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.wp-caption {
+		img.size-large,
+		img.size-full {
+			margin: 0;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	hr {
+		background-color: $color-green;
+		border: 0;
+		height: 4px;
+		margin: 2em auto;
+		width: 52px;
+
+		@include mq(medium) {
+			width: 88px;
+		}
+	}
+
+	.lede {
+		font-size: $font-23;
+		font-weight: $font-light;
+		line-height: 1.47;
+		margin: 16px 20px;
+		text-align: center;
+
+		@include mq(medium) {
+			font-size: $font-30;
+			margin: 16px 0;
+		}
+	}
+
+	.byline {
+		color: $color-grey-tint-3;
+		font-size: $font-14;
+		margin-bottom: 30px;
+		text-align: center;
+
+		@include mq(medium) {
+			font-size: $font-18;
+		}
+
+		.avatar {
+			@include size(24px);
+			border-radius: $border-round;
+			display: inline-block;
+			margin: 0 .5em;
+			margin-bottom: -.4em;
+
+			@include mq(medium) {
+				@include size(30px);
+			}
+		}
+
+		.author,
+		a {
+			color: $color-dark-grey;
+		}
+	}
+}

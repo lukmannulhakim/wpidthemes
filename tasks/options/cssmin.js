@@ -10,7 +10,7 @@ module.exports = {
 		expand: true,
 
 		cwd: 'assets/css/',
-		src: ['wpid.css'],
+		src: ['wpid.css','editor.css'],
 
 		dest: 'assets/css/',
 		ext: '.min.css'

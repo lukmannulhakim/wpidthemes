@@ -1,0 +1,37 @@
+// Font weights
+$font-light:     300;
+$font-normal:    400;
+$font-semi-bold: 500;
+$font-bold:      700;
+
+// Font sizes
+$font-8:  8px; // (tags)
+$font-9:  9px; // (form lables)
+$font-10: 10px; // table view link
+$font-11: 11px; // (OUR HANDS DOWN FAVORITE:)
+$font-12: 12px; // (button text, common question - text, date & TTR)
+$font-13: 13px; // (caption, disclaimer, common question - label, comment count, comment form fields)
+$font-14: 14px; // (author, link callout, footer trademarks) large screen (disclaimer)
+$font-16: 16px; // (common question - title, footer links) large screen (date & TTR)
+$font-18: 18px; // (body text, suggested reading section title) large screen (author)
+$font-20: 20px; // (h3?)
+$font-23: 23px; // (h2?, lede)
+$font-30: 30px; // (subtitle: "Chase Sapphire Preferred Card") large screen (h2?, lede)
+$font-34: 34px; // (article title)
+$font-54: 54px; // (article title)
+
+$border-radius-sm: 2px;
+$border-radius-md: 4px;
+$border-radius-lg: 6px;
+$border-round:     50%;
+
+$font-base: system;
+$font-main: 'Sailec', "helvetica neue", helvetica, $font-base;
+$font-alt:  'Open Sans', arial, sans-serif;
+
+// Padding
+$pad-small:   20px;
+$pad-medium:  80px;
+$pad-large:   156px;
+
+$max-width: 1340px;

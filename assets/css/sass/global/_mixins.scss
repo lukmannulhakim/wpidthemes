@@ -1,0 +1,175 @@
+// Remove outline on active/focus/hover
+@mixin no-outline {
+	// Remember to define focus styles! http://www.outlinenone.com/
+	@include visual-focus() {
+		outline: 0;
+	}
+}
+
+// For screen-reader text
+@mixin hide-text {
+	@include no-outline;
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+
+@mixin clearfix($pseudo: 'after') {
+	&:#{$pseudo} {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+// For easy square elements or setting both height and width of an element
+// Note, the interpolation: #{$height} is required so we can pass string values for things like calc()
+@mixin size($width, $height: $width) {
+	height: #{$height};
+	width: #{$width};
+}
+
+// Add styles on active/focus/hover
+// @param $states: list of states you want to apply the styles to
+// Example: @include visual-focus(){ color: blue; };
+// Example: @include visual-focus(hover, focus){ color: red; };
+@mixin visual-focus($states...) {
+	@if (0 < length($states)) {
+		$selector: '';
+		// This @each concatenates the arglist so we get one rule output
+		// instead of length($states)
+		@each $state in $states {
+			// unquote() because of a deprecation notice, disable because of nested quotes :facepalm:
+			// scss-lint:disable StringQuotes
+			$selector: unquote('#{$selector }  &:#{$state}  ,');
+			// scss-lint:enable StringQuotes
+		}
+
+		#{$selector} {
+			@content;
+		}
+	} @else {
+		&:active,
+		&:focus,
+		&:hover {
+			@content;
+		}
+	}
+}
+
+// Position an element horizontally (requires a 'position: relative' parent)
+@mixin horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+// Position an element vertically (requires a 'position: relative' parent)
+@mixin vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// Position an element both vertically AND horizontally (requires a 'position: relative' parent)
+@mixin center {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+
+// Icon
+// Allows easy insertion of an svg icon.
+//
+// $icon: name of the icon used in the symbol-defs (needs quotes)
+// $fill: icon fill color
+// $property: background-image or content?
+// example: @include icon('cross', '#000');
+@mixin icon($icon, $fill: false, $property: background-image) {
+	@if 'background-image' == $property {
+		// PNG fallback
+		background-image: url('../svg/png/#{$icon}.png');
+		// Some sensible defaults
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		content: ' ';
+		// SVG linear-gradient forces older browsers to use PNG fallback, slight performance hit, worth it.
+		#{$property}: url('../svg/symbol-defs.svg#icon-#{$icon}');
+	} @else {
+		#{$property}: url('../svg/symbol-defs.svg#icon-#{$icon}');
+	}
+
+
+	@if false != $fill {
+		fill: $fill;
+	}
+
+	@content;
+}
+
+@mixin wp-admin-bumper {
+	min-height: 46px; // height of mobile wp-admin bar in WP 4.0
+
+	@include mq(782px) {
+		min-height: 32px; // standard height of wp-admin bar in WP 4.0
+	}
+}
+
+@mixin all-the-headers($levels...) {
+	@if (0 < length($levels)) {
+		$selector: '';
+		// This @each concatenates the arglist so we get one rule output
+		// instead of length($states)
+		@each $level in $levels {
+			// scss-lint:disable StringQuotes
+			// unquote() because of a deprecation notice, disable because of nested quotes :facepalm:
+			$selector: unquote('#{$selector }  &:#{$level}  ,');
+			// scss-lint:enable StringQuotes
+		}
+
+		#{$selector} {
+			@content;
+		}
+	} @else {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@content;
+		}
+	}
+}
+
+@mixin share-icon($icon) {
+	&::before {
+		@include icon($icon, $color-grey-tint-3);
+		@include size(20px);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 20px;
+
+		@content;
+	}
+
+	&:hover {
+		&::before {
+			@include icon($icon, $color-green);
+			background-position: center;
+			background-repeat: no-repeat;
+
+			@content;
+		}
+	}
+}

@@ -1,0 +1,9 @@
+.single {
+	h1 {
+		font-size: $font-34;
+
+		@include mq(medium) {
+			font-size: $font-54;
+		}
+	}
+}

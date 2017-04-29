@@ -1,0 +1,13 @@
+.entry-thumbnail {
+	margin-bottom: 16px;
+	text-align: center;
+
+	@include mq(medium) {
+		margin-bottom: 50px;
+	}
+
+	img {
+		margin: auto auto;
+		max-height: 640px; // For portrait images
+	}
+}

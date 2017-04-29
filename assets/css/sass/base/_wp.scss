@@ -1,0 +1,17 @@
+.wp-caption-text {
+	color: $color-grey-tint-3;
+	font-family: $font-base;
+	font-size: $font-13;
+	line-height: 1.6;
+	padding: 0 $pad-small;
+	text-align: center;
+
+	@include mq() {
+		font-family: $font-main;
+	}
+}
+
+.wp-caption {
+	// need this to override inline styles
+	max-width: 100% ! important;
+}

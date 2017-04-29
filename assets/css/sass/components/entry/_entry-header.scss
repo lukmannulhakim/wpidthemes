@@ -1,0 +1,77 @@
+.entry-header {
+	padding: $pad-small $pad-small 0;
+
+	@include mq(medium) {
+		padding: $pad-small 0 0;
+	}
+
+
+	.top {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+
+		@include mq(medium) {
+			flex-flow: row;
+		}
+	}
+
+	.tags {
+		order: 1;
+
+		@include mq(medium) {
+			order: 2;
+		}
+
+		.title {
+			color: $color-grey-tint-3;
+			font-size: $font-12;
+		}
+
+		.taglist {
+			list-style: none;
+
+			li {
+				background-color: $color-green-xlight;
+				border-radius: 30%/60%;
+				display: inline-block;
+				font-size: $font-8;
+				margin-right: 12px;
+				margin-top: 6px;
+				padding: 5px 10px;
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+
+			a {
+				color: $color-green;
+			}
+		}
+	}
+
+	.entry-title {
+		margin: 20px 0;
+		order: 2;
+
+		@include mq(medium) {
+			// max-width: 620px; - for when we enable tags
+			order: 1;
+		}
+	}
+
+	.entry-meta {
+		font-size: $font-12;
+		margin: 16px 0;
+
+		@include mq(medium) {
+			font-size: $font-16;
+			margin-bottom: 50px;
+		}
+
+		.entry-date {
+			color: $color-grey-tint-3;
+		}
+	}
+}

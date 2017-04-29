@@ -1,0 +1,58 @@
+body {
+	@import '../components/entry/tables';
+
+	font-size: $font-18;
+	line-height: 1.6;
+	position: relative;
+
+	@include mq(medium) {
+		line-height: 1.8;
+		margin: 0 20px;
+	}
+
+	@include all-the-headers() {
+		font-weight: $font-normal;
+	}
+
+	h1 {
+		font-size: $font-34;
+
+		@include mq(medium) {
+			font-size: $font-54;
+		}
+	}
+
+	> *:not(img):not(.wp-caption):not(.callout):not(.information-callout):not(hr) {
+		padding: 0 20px;
+
+		@include mq(medium) {
+			padding: 0 80px;
+		}
+	}
+
+	> p > img {
+		margin-left: -20px;
+		margin-right: -20px;
+		width: calc(100% + 40px);
+
+		@include mq(medium) {
+			margin-left: -80px;
+			margin-right: -80px;
+			max-width: calc(100% + 160px);
+			width: calc(100% + 160px);
+		}
+	}
+
+	hr {
+		background-color: $color-green;
+		border: 0;
+		height: 4px;
+		margin: 2em auto;
+		width: 52px;
+
+		@include mq(medium) {
+			width: 88px;
+		}
+	}
+
+}

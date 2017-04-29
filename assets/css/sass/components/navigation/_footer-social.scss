@@ -1,0 +1,52 @@
+.footer .social {
+	border-bottom: 1px solid $color-grey-tint-2;
+	border-top: 1px solid $color-grey-tint-2;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 418px;
+	width: 100%;
+
+	@include mq(wp-mobile-admin-bar) {
+		max-width: none;
+	}
+
+	.link {
+		@include size(36px);
+		border: 2px solid $color-grey-tint-2;
+		border-radius: $border-round;
+		display: inline-block;
+		margin: 24px;
+		min-width: 36px;
+
+		$socials: (
+			facebook,
+			twitter,
+			youtube,
+			google-plus,
+			apple,
+			android
+	);
+
+		// Iterate through the above map and create rules for each
+		@each $item in $socials {
+			&.-#{$item} {
+				@include icon(#{$item}, $color-grey-tint-2);
+				background-size: 16px;
+
+				@if 'google-plus' == $item {
+					background-size: 16px ((16 / 36) * 28px);
+				}
+
+				@if 'facebook' == $item {
+					background-size: 12px 16px;
+				}
+
+				@if 'twitter' == $item {
+					background-size: 15px 16px;
+				}
+			}
+		}
+	}
+}

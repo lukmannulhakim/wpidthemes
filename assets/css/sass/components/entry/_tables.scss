@@ -1,0 +1,34 @@
+table {
+	color: $color-grey-tint-3;
+	font-family: $font-base;
+	font-size: $font-13;
+	height: auto;
+	margin: 20px auto;
+	max-width: calc(100% - 40px);
+	width: auto;
+
+	thead tr {
+		border-bottom: 0;
+		font-size: $font-11;
+	}
+
+	tr {
+		border-bottom: 1px solid $color-grey-tint-2;
+	}
+
+	td {
+		max-width: 182px;
+		padding: .5em;
+
+		img {
+			vertical-align: middle;
+		}
+
+		a {
+			color: $color-blue-medium;
+			display: inline-block;
+			font-size: $font-10;
+			font-weight: $font-bold;
+		}
+	}
+}

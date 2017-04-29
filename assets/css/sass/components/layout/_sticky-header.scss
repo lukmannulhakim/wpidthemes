@@ -1,0 +1,53 @@
+.sticky-header {
+	background-color: $color-white;
+	border-bottom: 1px solid $color-grey-tint-2;
+	display: none;
+	height: 90px;
+	margin: 0 auto;
+	max-width: $max-width;
+	padding: 24px 24px 0;
+	text-align: center;
+	width: 100%;
+
+
+	@include mq(large) {
+		// display: block; @TODO: uncomment when we want to implement
+		width: calc(100% - 50px);
+	}
+
+	&.scroll-to-fixed-fixed {
+		box-shadow: 0 50px 60px 0 $color-white;
+		z-index: inherit;
+	}
+
+	.back-navigation {
+		// @TODO: remove when we've hooked it up!
+		display: none;
+
+		@include mq(medium) {
+			color: $color-grey-tint-3;
+			font-size: $font-14;
+			left: 22px;
+			padding-left: 58px;
+			position: absolute;
+
+			&::before {
+				@include icon('back', $color-grey-tint-3);
+				@include size(26px);
+				left: 4px;
+				position: absolute;
+				transform: translateY(-25%);
+			}
+		}
+	}
+
+	.title-wrap {
+		text-align: center;
+	}
+
+	.posted-on {
+		color: $color-grey-tint-3;
+		font-size: $font-12;
+		margin-top: 4px;
+	}
+}

@@ -1,0 +1,16 @@
+.error404 {
+	main{
+		display: block;
+		margin: 20px auto;
+		max-width: 375px;
+		text-align: center;
+
+		p{
+			font-size: $font-18;
+		}
+	}
+	h2 {
+		font-size: $font-30;
+		font-weight: $font-bold;
+	}
+}

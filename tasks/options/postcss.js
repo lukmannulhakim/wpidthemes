@@ -7,7 +7,8 @@ module.exports = {
 			]
 		},
 		files: {
-			'assets/css/wpid.css': [ 'assets/css/wpid.css' ]
+			'assets/css/wpid.css': [ 'assets/css/wpid.css' ],
+			'assets/css/editor.css': [ 'assets/css/editor.css' ]
 		}
 	}
 };

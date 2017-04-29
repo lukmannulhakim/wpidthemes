@@ -1,0 +1,8 @@
+body {
+	color: $color-body-text;
+	font-family: $font-base;
+
+	@include mq(small) {
+		font-family: $font-main;
+	}
+}

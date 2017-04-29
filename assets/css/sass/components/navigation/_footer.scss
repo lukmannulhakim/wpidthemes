@@ -1,0 +1,34 @@
+.footer .menu {
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0 20px;
+	transform: translatex(0);
+	width: 100%;
+	max-width: 100vw;
+
+	.menu-item {
+		color: $color-fuscous-grey;
+		flex: 1 1 50%;
+		font-size: 14px;
+		margin-bottom: 14px;
+		padding: 0 4px;
+		text-align: center;
+		white-space: initial;
+		width: 100%;
+
+		@include mq(medium) {
+			flex: 1 1 17%;
+		}
+
+		a {
+			color: $color-fuscous-grey;
+
+			@include visual-focus() {
+				color: $color-green-dark;
+			}
+		}
+	}
+}
