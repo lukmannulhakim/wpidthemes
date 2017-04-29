@@ -1,6 +1,7 @@
 node_modules
 vendor
 .DS_Store
+yarn.lock
 assets/js/client.js
 assets/js/server.js
 assets/js/includes.js
