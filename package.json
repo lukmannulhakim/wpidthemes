@@ -26,6 +26,6 @@
     "postinstall" : "./node_modules/webpack/bin/webpack.js",
     "start": "npm run watch-scss & npm run watch",
     "watch": "NODE_ENV=\"development\" webpack --watch --progress --colors",
-    "watch-scss": "node-sass --watch --source-map true assets/wpid.scss -o assets/css/scss"
+    "watch-scss": "node-sass --watch --source-map true assets/css/scss/wpid.scss -o assets/css/"
   }
 }
