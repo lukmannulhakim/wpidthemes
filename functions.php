@@ -25,13 +25,16 @@
  * @since 0.1.0
  */
 
-if ( ! class_exists( '\NodeifyWP\App' ) ) {
-	if ( is_admin() ) {
-		return;
-	} else {
-		wp_die( esc_html__( 'Twenty Sixteen React requires the NodeifyWP plugin.', 'twentysixteen' ) );
-	}
-}
+define( 'WPID_VERSION', '0.1.0' );
+define( 'WPID_URL', get_stylesheet_directory_uri() );
+define( 'WPID_TEMPLATE_URL', get_template_directory_uri() );
+define( 'WPID_PATH', get_template_directory() . '/' );
+define( 'WPID_INC', WPID_PATH . 'includes/' );
 
-\NodeifyWP\App::setup( __DIR__ . '/js/server.js', get_stylesheet_directory_uri() . '/js/client.js', __DIR__ . '/js/includes.js', get_stylesheet_directory_uri() . '/js/includes.js' );
 
+// Include compartmentalized functions
+require_once WPID_INC . 'functions/core.php';
+
+
+// Run the setup functions
+WPID\Core\setup();

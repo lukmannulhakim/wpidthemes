@@ -1,6 +1,7 @@
 node_modules
 vendor
 .DS_Store
-js/client.js
-js/server.js
-js/includes.js
+assets/js/client.js
+assets/js/server.js
+assets/js/includes.js
+assets/css/wpid.css

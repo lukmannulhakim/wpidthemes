@@ -11,10 +11,10 @@ var loaders = [
 
 module.exports = [
 	{
-	    entry: './js/src/server.js',
+	    entry: './assets/js/src/server.js',
 	    output: {
 	        path: __dirname,
-	        filename: './js/server.js'
+	        filename: './assets/js/server.js'
 	    },
 	    module: {
 			loaders: loaders
@@ -24,10 +24,10 @@ module.exports = [
 	    }
 	},
 	{
-	    entry: './js/src/includes.js',
+	    entry: './assets/js/src/includes.js',
 	    output: {
 	        path: __dirname,
-	        filename: './js/includes.js',
+	        filename: './assets/js/includes.js',
 			libraryTarget: 'var',
 			library: 'includes'
 	    },
@@ -39,10 +39,10 @@ module.exports = [
 	    }
 	},
 	{
-	    entry: './js/src/client.js',
+	    entry: './assets/js/src/client.js',
 	    output: {
 	        path: __dirname,
-	        filename: './js/client.js'
+	        filename: './assets/js/client.js'
 	    },
 	    module: {
 			loaders: loaders
