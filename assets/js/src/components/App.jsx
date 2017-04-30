@@ -35,6 +35,13 @@ class App extends React.Component {
 				<div onClick={this.handleAllClickEvents} className="site-inner">
 					<Header {...this.props} />
 				</div>
+
+
+				<div dangerouslySetInnerHTML={{__html: this.props.template_tags.wp_footer}}></div>
+
+				<div dangerouslySetInnerHTML={{__html: this.props.template_tags.admin_bar}}></div>
+
+				<script dangerouslySetInnerHTML={{__html: initialStateString}}></script>
 			</div>
 		);
 	}

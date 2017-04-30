@@ -34,6 +34,7 @@ define( 'WPID_INC', WPID_PATH . 'includes/' );
 
 // Include compartmentalized functions
 require_once WPID_INC . 'functions/core.php';
+require_once WPID_INC . 'functions/template-tags.php';
 
 
 // Run the setup functions

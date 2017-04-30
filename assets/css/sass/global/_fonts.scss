@@ -54,19 +54,3 @@
 	font-weight: 700;
 	src: local('.SFNSText-BoldItalic'), local('.HelveticaNeueDeskInterface-BoldItalic'), local('.LucidaGrandeUI'), local('Segoe UI Bold Italic'), local('Ubuntu Bold Italic'), local('Roboto-BoldItalic'), local('DroidSans-Bold'), local('Tahoma Bold');
 }
-
-@font-face {
-	font-family: Sailec;
-	font-style: normal;
-	font-weight: 400;
-	src: url('../fonts/sailec_regular.woff2') format('woff2'),
-         url('sailec_regular.woff') format('woff');
-}
-
-@font-face {
-	font-family: Sailec;
-	font-style: normal;
-	font-weight: 700;
-	src: url('../fonts/sailec_bold.woff2') format('woff2'),
-         url('sailec_bold.woff') format('woff');
-}

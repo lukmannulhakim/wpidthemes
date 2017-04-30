@@ -121,6 +121,7 @@ $mq-media-type: screen !default;
 	}
 	@else {
 		@warn "Breakpoint #{$name} wasn't found in $breakpoints.";
+		@return $breakpoints;
 	}
 }
 
